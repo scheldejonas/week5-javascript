@@ -178,8 +178,9 @@ console.log('person2 is ' + person2.firstName); // logs "person2 is Bob"
       showAge: function(){ return 'this car is '+this.age+' years old'; }
     };
 
-``` And 
-```
+```  
+And 
+```  
 buttons[i].onclick = function(event){
   console.log(this); //this refers to the button that was clicked
 };
