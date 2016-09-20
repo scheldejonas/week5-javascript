@@ -147,7 +147,7 @@ and function declaration as a statement:
 - dot notation:
   - `person.lastName = 'Petersen';` 
 - array notation
-  - `person[lastname] = 'Petersen';`
+  - `person["lastname"] = 'Petersen';`
 
 
 ### Object constructor  
@@ -305,7 +305,10 @@ JavaScript in strict mode does not allow variables to be used if they are not de
 
 ### innerHTML vs. innerText
 
+
+
 ### Traversing the DOM
+
 
 
 ### Events
@@ -315,13 +318,9 @@ JavaScript in strict mode does not allow variables to be used if they are not de
 ### Modifying DOM
 
 
-### 
 
-### 
+### Forms
 
-### 
-
-### 
 
 
 ## Exercise day 2: 
@@ -337,7 +336,7 @@ JavaScript in strict mode does not allow variables to be used if they are not de
 
 
 
-##Day 4: 
+##Day 4: JSON and AJAX
 
 
 ## Exercise day 4: 
