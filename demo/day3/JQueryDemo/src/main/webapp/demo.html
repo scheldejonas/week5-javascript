@@ -9,7 +9,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <style>
-            div{
+            div, body, img{
+                border: 0px;
+                padding: 0px;
+                margin: 0px;
+            }
+            div .red{
                 border: 2px solid red;
                 height: 100px;
                 width: 100px;
@@ -18,8 +23,28 @@
         </style>
     </head>
     <body>
-        <div></div>
-        <div></div>
+        <div class="red"></div>
+        <div class="red"></div>
+        <div>
+            <ul>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+                <li>Four</li>
+                <li>Five</li>
+                <li>Six</li>
+            </ul>
+        </div>
+        <ul>
+            <li>new1</li>
+            <li>new2</li>
+        </ul>
+        <div id="boats">
+            <img src="img/boat1.jpg" alt=""/>
+            <img src="img/boat2.jpg" alt=""/>
+            <img src="img/boat3.jpg" alt=""/>
+        </div>
+        
         <script src="scripts/myJquery.js" type="text/javascript"></script>
     </body>
 </html>
