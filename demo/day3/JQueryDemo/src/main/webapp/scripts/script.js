@@ -12,7 +12,8 @@ $(document).ready(function () {
         $(this).css({"background-color": "green", "font-size": "200%"});
         $("p").css("background-color", "yellow");
     });
-    $.each([52, 97, 33, 45, 22], function (index, value) {
+    var myArr = [52, 97, 33, 45, 22];
+    $.each(myArr, function (index, value) {
         console.log(index + ": " + value);
     });
 });
