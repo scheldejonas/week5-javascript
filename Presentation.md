@@ -331,6 +331,94 @@ JavaScript in strict mode does not allow variables to be used if they are not de
 
 ##Day 3: JQuery
 
+###What is JQuery?
+- A javascript library
+- `<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>`
+	- Find CDN here: [jquery cdn](https://developers.google.com/speed/libraries/)
+- Helps level out browser differences
+- Adds overhead if not necessary  
+- JQuery IS javascript
+	- Inside JQuery code we can use javascript code as we please.
+
+Syntax and structure:  
+1. Selectors  
+	- filters  
+2. Events  
+    - Mouse, keyboard, document…  
+3. Effects  
+    - Custom or predefined
+
+![](img/jQueryExample.png)
+
+
+###Method Chaining
+#####Since all functions return the jquery object:
+![](img/chaining.png)
+
+###Selectors
+See all selectors here: 
+[list of selectors](http://www.w3schools.com/jquery/jquery_ref_selectors.asp)  
+- Selectors are a powerful set of tools for matching elements in an HTML document.
+
+
+###jQuery get/set methods
+ - .text( ) 
+  - Sets or returns the text content of selected elements
+- .html( ) 
+  - Sets or returns the content of selected elements (including HTML markup)
+- .val( ) 
+  - Sets or returns the value of form fields
+
+###JQuery add/remove
+- append( ): Inserts content at the end of the selected elements
+- prepend(): - Inserts content at the beginning of the selected elements
+- after(): Inserts content after the selected elements
+- before(): Inserts content before the selected elements
+- remove(): Removes the selected element (and its child elements)
+- empty(): Removes the child elements from the selected element
+
+
+###JQuery events
+See all events here: [list of events](http://www.w3schools.com/jquery/jquery_ref_events.asp)  
+
+
+###JQuery effects
+See all effects here [list of effects](http://www.w3schools.com/jquery/jquery_ref_effects.asp)
+
+
+
+###JQuery with HTML and CSS
+See methods for manipulating HTML and CSS here [list of ](http://www.w3schools.com/jquery/jquery_ref_html.asp)
+
+
+###JQuery css method
+Takes an object argument or just 2 strings (key/value):  
+```javascript
+$(document).ready(function(){
+    //alert("test");
+    $("#test1").click(function(){
+        //alert("test");
+        $(this).addClass("red");
+    });
+    $("#test2").click(function(){
+        $(this).toggleClass("red");
+    });
+    $("#test3").click(function(){
+        $(this).css({"background-color": "green", "font-size": "200%"});
+        $("p").css("background-color", "yellow");
+    });
+});
+```
+
+###Looping
+With $.each(array, callback):
+```
+var myArr = [52, 97, 33, 45, 22];
+    $.each(myArr, function (index, value) {
+        console.log(index + ": " + value);
+    });
+```
+
 
 ## Exercise day 3: 
 [Get the daily exercise here](https://github.com/CphBusCosSem3/Exercises/blob/master/SP/SP4/Javascript%20ex%203.pdf)
