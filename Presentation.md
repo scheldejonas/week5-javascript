@@ -430,6 +430,8 @@ var myArr = [52, 97, 33, 45, 22];
 ###XML vs. JSON
 
 ###JSON as javascript objects
+- JSON.stringify(data) turns a Javascript object into JSON text and stores that JSON text in a string.
+- JSON.parse(data) turns a string of JSON text into a Javascript object.
 
 ###Classic web application
 
@@ -466,7 +468,14 @@ Code example here
 JavaScript runtimes contain a message queue which stores a list of messages to be processed and their associated callback functions
 ![](img/eventloop.png)
 
-###JQuery and AJAX
+### AJAX with JQuery 
+####Jquery offers these methods:
+- $.ajax()
+    - Perform an asynchronous HTTP (Ajax) request. Most “complex” method to use, but also the most flexible.
+[Documentation here](http://api.jquery.com/category/ajax/)
+
+
+### Jquery: the ajax() method
 - The jQuery XMLHttpRequest (jqXHR) object returned by $.ajax() is a superset of the browser's native XMLHttpRequest object.  
 - The jqXHR implement the Promise interface, giving them all the properties, methods, and behavior of a Promise.
 
@@ -474,23 +483,35 @@ JavaScript runtimes contain a message queue which stores a list of messages to b
 AJAX jquery code example here
 ```
 
-### AJAX with JQuery 
-####Jquery offers these methods:
-- $.ajax()
-    - Perform an asynchronous HTTP (Ajax) request. Most “complex” method to use, but also the most flexible.
-[Documentation here](http://api.jquery.com/category/ajax/)
-
 ####Shorthand methods
 - $.load()
 	- Load data from the server and place the returned HTML into the matched  element.
+	- **$.load( url [, data ] [, complete ] )**
+		- url: the resource to get from the server
+		- data: (optional) if any request parameters should be added
+		- complete: callback function to run when the server response returns.
 - $.getJSON()  
 	- Load JSON-encoded data from the server using a GET HTTP request.
 - $.getScript() 
-	- Load a JavaScript file from the server using a GET HTTP request, then execute it.
+	- Load a JavaScript file from the server using a GET HTTP request, then executes it.
 - $.get()
 	- Load data from the server using a HTTP GET request.
+	- $.get( url [, data ] [, success ] [, dataType ] )
 - $.post()
 	- Load data from the server using a HTTP POST request.
+	- **$.post( url [, data ] [, success ] [, dataType ] )**
+		- url
+			- Type: String
+			- A string containing the URL to which the request is sent.
+		- data
+			- Type: PlainObject or String
+			- A plain object or string that is sent to the server with the request.
+		- success
+			- Type: Function( PlainObject data, String textStatus, jqXHR jqXHR )
+			- A callback function that is executed if the request succeeds. Required if dataType is provided, but can be null in that case.
+		- dataType
+			- Type: String
+ 			- The type of data expected from the server. Default: Intelligent Guess (xml, json, script, text, html).
 
 ### $.load() method example
 ####This example loads the server time from the DateServlet 
