@@ -435,18 +435,25 @@ var myArr = [52, 97, 33, 45, 22];
 
 ###Classic web application
 
-![](img/classicwebapp.png)
+![](img/classicwebapp.png)  
+
+
 ###AJAX web application
-![](img/ajaxwebapp.png)
+![](img/ajaxwebapp.png)  
+
 ###AJAX (Asynchronous Javascript and XML
-![](img/async.png)
+![](img/async.png)  
+
 ###AJAX contains:
+
 - HTML and CSS for presentation
 - DOM for dynamic display and interaction
 - XML or JSON for interchange of data
 - XMLHttpRequest object for asynchronous communication
 - JavaScript to glue everything together
-- jQuery to hide complexity and differences
+- jQuery to hide complexity and differences  
+
+
 ###Same Origin Policy (SOP)
 ![](img/SOP.png)  
 
