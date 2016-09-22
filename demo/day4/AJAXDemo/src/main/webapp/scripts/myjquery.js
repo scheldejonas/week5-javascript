@@ -4,10 +4,7 @@ $(document).ready(function(){
         
         $.get('JsonProvider', function(data){
             var persons = data;
-//            for (var i = 0; i < persons.length; i++) {
-//                console.log(persons[i]);
-//            }
-//            console.log(persons);
+
             persons.forEach(function(element){
                 console.log(element.name);
             });
