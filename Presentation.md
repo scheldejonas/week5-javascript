@@ -427,6 +427,138 @@ var myArr = [52, 97, 33, 45, 22];
 
 ##Day 4: JSON and AJAX
 
+###XML vs. JSON
+
+###JSON as javascript objects
+
+###Classic web application
+
+![](img/classicwebapp.png)
+###AJAX web application
+![](img/ajaxwebapp.png)
+###AJAX (Asynchronous Javascript and XML
+![](img/async.png)
+###AJAX contains:
+- HTML and CSS for presentation
+- DOM for dynamic display and interaction
+- XML or JSON for interchange of data
+- XMLHttpRequest object for asynchronous communication
+- JavaScript to glue everything together
+- jQuery to hide complexity and differences
+###Same Origin Policy (SOP)
+![](img/SOP.png)  
+
+###SOP examples: 
+![](img/SOP2.png)  
+
+###Cross Origin Ressource Sharing
+####Let the server do the fetching:
+![](img/cors.png)
+
+### Javascript promise
+[Promises explained here](http://www.html5rocks.com/en/tutorials/es6/promises/)  
+![](img/promise.png)
+```
+Code example here
+```
+### Javascript the event loop
+[Understand the event loop](http://blog.carbonfive.com/2013/10/27/the-javascript-event-loop-explained/)  
+JavaScript runtimes contain a message queue which stores a list of messages to be processed and their associated callback functions
+![](img/eventloop.png)
+
+###JQuery and AJAX
+- The jQuery XMLHttpRequest (jqXHR) object returned by $.ajax() is a superset of the browser's native XMLHttpRequest object.  
+- The jqXHR implement the Promise interface, giving them all the properties, methods, and behavior of a Promise.
+
+```
+AJAX jquery code example here
+```
+
+### AJAX with JQuery 
+####Jquery offers these methods:
+- $.ajax()
+    - Perform an asynchronous HTTP (Ajax) request. Most “complex” method to use, but also the most flexible.
+[Documentation here](http://api.jquery.com/category/ajax/)
+
+####Shorthand methods
+- $.load()
+	- Load data from the server and place the returned HTML into the matched  element.
+- $.getJSON()  
+	- Load JSON-encoded data from the server using a GET HTTP request.
+- $.getScript() 
+	- Load a JavaScript file from the server using a GET HTTP request, then execute it.
+- $.get()
+	- Load data from the server using a HTTP GET request.
+- $.post()
+	- Load data from the server using a HTTP POST request.
+
+### $.load() method example
+####This example loads the server time from the DateServlet 
+- $(selector).load(URL, data, callback);
+  1. The URL to load.
+  2. Optional data parameter. Specifies a set of querystring key/value pairs to send along with the request.
+  3. Optional callback parameter for a function to be executed after load() is completed.
+
+```   <script>
+	      $(document).ready(function(){
+	        $("button").click(function(){
+	       $("#time").load("DateServlet");
+	        });
+	      });
+      </script>
+```
+
+### $.post method example
+#### This example post data to the server:
+- $.post() takes 2 or 3 arguments
+  1. url – the server address
+  2. data – the data to be send to the server as an object of key/value pairs
+  3. Callback – optional function to run when data is submittet
+
+```
+$("#button3").click(function(){
+        var person = {name: 'Peter', age: 4, phone: '+4521346578'};
+        var url = 'MyServlet'; 
+        //$.post(url, data, callback, type);
+        $.post(url, person, function(data){ alert('data: '+data); });
+    });
+```
+
+###$.ajax() method example
+####This is used for all the types of operation (by using a config object
+[reference here](http://api.jquery.com/category/ajax)
+```
+var request = $.ajax({
+  url: ‘myServlet’,
+  type: "GET",
+  dataType: "json",
+});
+
+request.done(function( msg ) {
+  $( "#log" ).html( msg );
+});
+ 
+request.fail(function( jqXHR, textStatus ) {
+  alert( "Request failed: " + textStatus );
+});
+
+```
+
+
+###Lets Demo
+![](img/demoman.png)
+
+
+### SVG images
+- Completely unrelated topic because it is used in the studypoint exercise tomorrow.
+- Scalable Vector Graphics (SVG)
+- XML-based
+    - Look at fourHearts.svg and 
+    - Countries_Europe.svg 
+- Look at them in a text editor
+
+![](img/svgcode.png)
+
 
 ## Exercise day 4: 
 [Get the daily exercise here](https://github.com/CphBusCosSem3/Exercises/blob/master/SP/SP4/Javascript%20ex%204.pdf)

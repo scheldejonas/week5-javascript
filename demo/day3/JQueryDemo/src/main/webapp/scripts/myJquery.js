@@ -12,7 +12,7 @@ $(document).ready(function () {
     });
     //Example of changing position of elments with append
     $("#boats img").click(function () {
-        $("#boats").append($(this).css({"margin": "2px"}));
+        $("#boats").append($(this));
     });
 });
 
