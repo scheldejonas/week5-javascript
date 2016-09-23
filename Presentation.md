@@ -482,15 +482,36 @@ JavaScript runtimes contain a message queue which stores a list of messages to b
 [Documentation here](http://api.jquery.com/category/ajax/)
 
 
+
 ### Jquery: the ajax() method
+
 - The jQuery XMLHttpRequest (jqXHR) object returned by $.ajax() is a superset of the browser's native XMLHttpRequest object.  
 - The jqXHR implement the Promise interface, giving them all the properties, methods, and behavior of a Promise.
 
 ```
-AJAX jquery code example here
+        $("#button2").click(function(){
+            var url = 'JsonProvider';
+            var xhr = $.ajax({
+                url: url,
+                error: function(xhr, ajaxOptions, thrownError){ alert(xhr.status +" : "+ thrownError);
+                },
+                dataType: 'json', //Because this is json it gets deserialised into js objects
+                success: function(data){ 
+                    $.each(data, function() {
+                        $.each(this, function(k, v) {
+                            console.log(k +" : "+ v);
+                        });
+                    });
+                },
+                type: 'GET'
+            });
+        });
 ```
 
+
+
 ####Shorthand methods
+
 - $.load()
 	- Load data from the server and place the returned HTML into the matched  element.
 	- **$.load( url [, data ] [, complete ] )**
@@ -520,8 +541,12 @@ AJAX jquery code example here
 			- Type: String
  			- The type of data expected from the server. Default: Intelligent Guess (xml, json, script, text, html).
 
+
+
 ### $.load() method example
+
 ####This example loads the server time from the DateServlet 
+
 - $(selector).load(URL, data, callback);
   1. The URL to load.
   2. Optional data parameter. Specifies a set of querystring key/value pairs to send along with the request.
@@ -536,8 +561,11 @@ AJAX jquery code example here
       </script>
 ```
 
+
+
 ### $.post method example
-#### This example post data to the server:
+
+#### This example post data to the server:  
 - $.post() takes 2 or 3 arguments
   1. url – the server address
   2. data – the data to be send to the server as an object of key/value pairs
@@ -584,6 +612,7 @@ request.fail(function( jqXHR, textStatus ) {
     - Look at fourHearts.svg and 
     - Countries_Europe.svg 
 - Look at them in a text editor
+- Look at how to select svg pars by id (the g-tags)
 
 ![](img/svgcode.png)
 
