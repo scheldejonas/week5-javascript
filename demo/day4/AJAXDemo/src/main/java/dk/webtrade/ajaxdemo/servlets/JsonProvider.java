@@ -3,7 +3,6 @@ package dk.webtrade.ajaxdemo.servlets;
 /*
 
  */
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import entity.Person;
@@ -23,7 +22,9 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(urlPatterns = {"/JsonProvider"})
 public class JsonProvider extends HttpServlet {
+
     Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -36,10 +37,11 @@ public class JsonProvider extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        //String insert = request.getParameter("insert");
+        //the parameter is read from the json object attached to the $.post method in intro.js
         String name = request.getParameter("name");
+        int age = Integer.parseInt(request.getParameter("age"));
+        String phone = request.getParameter("phone");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
             List<Person> persons = new ArrayList();
             persons.add(new Person("Peter", 12, "09808080"));
             persons.add(new Person("Rikke", 43, "49395454"));
@@ -47,13 +49,15 @@ public class JsonProvider extends HttpServlet {
             persons.add(new Person("Frede", 22, "49349222"));
             persons.add(new Person("Mikkel", 94, "09008080"));
             persons.add(new Person("Bertha", 25, "32344555"));
-            if(name == null)
+            if (name == null) //if name was not set just return the whole list
+            {
                 out.print(gson.toJson(persons));
-            else{
-//                name = request.getParameter("name");
-                String age = request.getParameter("age");
-                String tlf = request.getParameter("tlf");
-            out.printf(name +" "+ age +" "+ tlf);}
+            } else if (name.equals("Rastapopoulos")) {
+                response.setContentType("application/json");
+                out.print(gson.toJson(new Person(name, age, phone)));
+            } else {
+                out.printf(name + " " + age + " " + phone);
+            }
         }
     }
 
