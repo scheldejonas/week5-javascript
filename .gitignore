@@ -13,23 +13,8 @@ nbdist/
 ### Java ###
 *.class
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
 
 # Package Files #
 *.jar
 *.war
 *.ear
-
-## Exercises ##
-Exercises/
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-/demo/day1/JSfirstDemo/target/
-/demo/day1/JSday2/target/
-/demo/day1/RestMavenTest/target/
-/demo/day3/JQueryDemo/target/
-/demo/day4/AJAXDemo/target/
-/demo/day4/REST_Demo/target/
-/demo/day4/todelete/target/
