@@ -1,0 +1,1 @@
+[Day1-Slides](http://js-plaul.rhcloud.com/js1_sem3/js.html)
