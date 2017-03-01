@@ -2,10 +2,12 @@
 ##Day 3: JSON and AJAX
 
 ###XML vs. JSON
+[SEE EXAMPLE HERE](https://www.w3schools.com/js/js_json_xml.asp)  
 
 ###JSON as javascript objects
 - JSON.stringify(data) turns a Javascript object into JSON text and stores that JSON text in a string.
 - JSON.parse(data) turns a string of JSON text into a Javascript object.
+####Demo it in console
 
 ###Classic web application
 
