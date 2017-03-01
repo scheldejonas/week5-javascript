@@ -36,3 +36,4 @@ hs_err_pid*
 
 /demo/CORSdemo/target/
 /demo/CORSdemoFrontend/nbproject/private/
+/demo/AjaxDemoSimple/nbproject/private/
