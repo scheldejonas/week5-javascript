@@ -11,14 +11,14 @@
 
 ###Classic web application
 
-![](img/classicwebapp.png)  
+![](../img/classicwebapp.png)  
 
 
 ###AJAX web application
-![](img/ajaxwebapp.png)  
+![](../img/ajaxwebapp.png)  
 
 ###AJAX (Asynchronous Javascript and XML
-![](img/async.png)  
+![](../img/async.png)  
 
 ###AJAX contains:
 
@@ -44,30 +44,30 @@ fetch('https://davidwalsh.name/demo/arsenal.json').then(function(response) {
 ##Demo ajax from java servlet  
 
 ###Same Origin Policy (SOP)
-![](img/SOP.png)  
+![](../img/SOP.png)  
 
 ###SOP examples: 
-![](img/SOP2.png)  
+![](../img/SOP2.png)  
 
 ###Cross Origin Ressource Sharing
 ####Let the server do the fetching:
-![](img/cors.png)
+![](../img/cors.png)
 
 ### Javascript promise
 [Promises explained here](http://www.html5rocks.com/en/tutorials/es6/promises/)  
-![](img/promise.png)
+![](../img/promise.png)
 ```
 Code example here
 ```
 ### Javascript the event loop
 [Understand the event loop](http://blog.carbonfive.com/2013/10/27/the-javascript-event-loop-explained/)  
 JavaScript runtimes contain a message queue which stores a list of messages to be processed and their associated callback functions
-![](img/eventloop.png)
+![](../img/eventloop.png)
 
 
 
 ###Lets Demo
-![](img/demoman.png)
+![](../img/demoman.png)
 
 
 ### SVG images
@@ -79,7 +79,7 @@ JavaScript runtimes contain a message queue which stores a list of messages to b
 - Look at them in a text editor
 - Look at how to select svg pars by id (the g-tags)
 
-![](img/svgcode.png)
+![](../img/svgcode.png)
 
 
 ## Exercise day 3: 
