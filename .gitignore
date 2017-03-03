@@ -19,6 +19,7 @@ nbdist/
 *.war
 *.ear
 
+<<<<<<< HEAD
 # Ignore docs files
 _gh_pages
 _site
@@ -60,3 +61,25 @@ docs/.jekyll-metadata
 # Folders to ignore
 bower_components
 node_modules
+=======
+
+## Exercises ##
+**/*.docx
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+/demo/day1/JSfirstDemo/target/
+/demo/day1/JSday2/target/
+/demo/day1/RestMavenTest/target/
+/demo/day3/JQueryDemo/target/
+/demo/day4/AJAXDemo/target/
+/demo/day4/REST_Demo/target/
+/demo/day4/todelete/target/
+/demo/day4/todelete/nbproject/private/
+
+/demo/CORSdemo/target/
+/demo/CORSdemoFrontend/nbproject/private/
+/demo/AjaxDemoSimple/nbproject/private/
+/demo/gsonDemo/target/
+/demo/ajax_json_solution/target/
+>>>>>>> CphBusCosSem3/master
